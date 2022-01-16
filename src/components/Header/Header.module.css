@@ -1,0 +1,16 @@
+.header {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 209, 1);
+    color: rgb(129, 128, 134);
+}
+
+.wrap {
+    height: 100%;
+    width: var(--width-wrap);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+}

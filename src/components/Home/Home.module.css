@@ -1,0 +1,10 @@
+.main {
+    flex: 1 0 auto;
+}
+
+.wrap {
+    height: 100%;
+    width: var(--width-wrap);
+    padding: 5px 5px;
+    margin: 0 auto;
+}

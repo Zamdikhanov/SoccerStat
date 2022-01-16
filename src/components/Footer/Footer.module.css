@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+    background-color: var(--color-main-gray);
+    color: #fff;
+    flex: 0 0 auto;
+}
+
+.wrap {
+    height: 100%;
+    width: var(--width-wrap);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin: 0 auto;
+}
