@@ -3,19 +3,19 @@ import css from './Header.module.css';
 
 const Header = () => {
     return (
-        <div className={css.header}>
+        <header className={css.header}>
             <div className={css.wrap}>
-                <div>
-                    умный слоган
+                <div className={css.tagline}>
+                    <h3>Футбол может сделать человека счастливым и знаменитым. </h3>
                 </div>
-                <div>
-                    Лого
+                <div className={css.title}>
+                    <h2 className={css.title_text}>SOCCER-STAT</h2>
                 </div>
-                <div>
-                    текущая дата
+                <div className={css.tagline}>
+                    <h3>Игра забывается, результат остаётся</h3>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

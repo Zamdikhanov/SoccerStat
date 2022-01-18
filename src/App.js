@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import LeagueCalendar from './components/LeagueCalendar/Leaguecalendar';
-import LeagueList from './components/LeagueList/LeagueList';
+import LeagueListContainer from './components/LeagueList/LeagueListContainer';
 import Nav from './components/Nav/Nav';
 import TeamCalendar from './components/TeamCalendar/TeamCalendar';
 import TeamsList from './components/TeamsList/TeamsList';
@@ -24,7 +24,7 @@ function App() {
             element={<LeagueCalendar />}
           />
           <Route path="/league-list"
-            element={<LeagueList />}
+            element={<LeagueListContainer />}
           />
           <Route path="/team-calendar"
             element={<TeamCalendar />}

@@ -3,8 +3,10 @@
 }
 
 .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     height: 100%;
     width: var(--width-wrap);
-    padding: 5px 5px;
-    margin: 0 auto;
+    margin: 5px auto;
 }

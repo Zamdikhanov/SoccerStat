@@ -4,7 +4,7 @@ import css from './Nav.module.css';
 
 const Nav = () => {
     return (
-        <div className={css.nav}>
+        <nav className={css.nav}>
             <div className={css.wrap}>
                 <ul className={css.list}>
                     <li className={css.list_item}>
@@ -24,7 +24,7 @@ const Nav = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 }
 
