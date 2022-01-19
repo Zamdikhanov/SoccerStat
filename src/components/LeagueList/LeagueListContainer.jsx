@@ -9,8 +9,6 @@ class LeagueListContainer extends React.Component {
         this.props.requestLeague();
     }
 
-
-
     render() {
         return (
             <>
