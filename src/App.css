@@ -1,8 +1,8 @@
 :root {
-    --color-main-gray: rgb(129, 128, 134);
-    --color-main-gray08: rgba(129, 128, 134, 0.8);
+    --color-main-gray: rgb(128, 127, 133);
+    --color-main-gray08: rgba(128, 127, 133, 0.8);
     --color-main-accent: rgb(255, 209, 1);
-    --color-additional-accent: rgb(255, 0, 0);
+    --color-additional-accent: rgb(250, 5, 5);
     --width-wrap: 1400px;
 }
 

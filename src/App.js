@@ -3,7 +3,7 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import LeagueCalendar from './components/LeagueCalendar/Leaguecalendar';
+import LeagueCalendar from './components/LeagueCalendar/LeagueCalendar';
 import LeagueListContainer from './components/LeagueList/LeagueListContainer';
 import Nav from './components/Nav/Nav';
 import TeamCalendar from './components/TeamCalendar/TeamCalendar';

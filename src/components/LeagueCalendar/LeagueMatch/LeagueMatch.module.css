@@ -1,0 +1,44 @@
+.match {
+    display: flex;
+    border: 1px solid var(--color-main-gray);
+    width: 100%;
+    padding: 0.3em 1em;
+}
+
+.matchPart_1 {
+    display: flex;
+    width: 50%;
+}
+
+.block {
+    padding: 0 1em;
+}
+
+.matchday {
+    width: 20%;
+}
+
+.status {
+    width: 40%;
+}
+
+.utcDate {
+    width: 40%;
+}
+
+.matchPart_2 {
+    display: flex;
+    width: 50%;
+}
+
+.homeTeam {
+    width: 40%;
+}
+
+.score {
+    width: 20%;
+}
+
+.awayTeam {
+    width: 40%;
+}

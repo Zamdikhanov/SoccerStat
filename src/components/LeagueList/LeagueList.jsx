@@ -3,7 +3,6 @@ import LeagueCard from "./LeagueCard/LeagueCard";
 import css from './LeagueList.module.css';
 
 const LeagueList = (props) => {
-    console.log ('1 ',props.league);
     return (
         <main className={css.main}>
             <div className={css.wrap}>
