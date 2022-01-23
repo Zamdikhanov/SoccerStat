@@ -5,6 +5,10 @@
     padding: 0.3em 1em;
 }
 
+.match:nth-child(2n) {
+    background-color: var(--color-main-gray02);
+}
+
 .matchPart_1 {
     display: flex;
     width: 50%;
@@ -12,6 +16,10 @@
 
 .block {
     padding: 0 1em;
+}
+
+.winner {
+    font-weight: 700;
 }
 
 .matchday {

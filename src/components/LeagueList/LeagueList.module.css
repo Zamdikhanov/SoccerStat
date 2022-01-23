@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     height: 100%;
-    width: var(--width-wrap);
+    width: calc(var(--width-wrap) + 20px);
     margin: 5px auto;
+    padding: 0 -10px;
 }

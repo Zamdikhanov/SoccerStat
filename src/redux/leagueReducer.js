@@ -35,6 +35,7 @@ const leagueReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_LEAGUE:
             return ({
+                ...state,
                 ...action.competitions
             });
 

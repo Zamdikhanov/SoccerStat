@@ -1,10 +1,25 @@
-import React from "react";
-import LeagueCalendar from "./Leaguecalendar";
+import React from 'react';
+import { connect } from 'react-redux';
+import { requestLeagueMatches } from '../../redux/leagueMatchesReducer';
+import LeagueCalendar from './LeagueCalendar';
 
-const LeagueCalendarContainer = () => {
-    return (
-    <LeagueCalendar />
-    )
+class LeagueCalendarContainer extends React.Component {
+    componentDidMount() {
+        this.props.requestLeagueMatches();
+    }
+    render() {
+        return (
+            <>
+            <LeagueCalendar {...this.props.leagueMathes} />
+            </>
+        )
+    }
 }
 
-export default LeagueCalendarContainer;
+let mapStateToProps = (state) => ({
+    leagueMathes: state.leagueMatches,
+});
+
+export default connect(mapStateToProps, {
+    requestLeagueMatches,
+})(LeagueCalendarContainer);
