@@ -33,6 +33,14 @@
     text-shadow: 0px 0px 5px var(--color-main-gray);
 }
 
+.logo {
+    display: block;
+    width: 60%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
 .tagline h3 {
     display: flex;
     align-items: center;

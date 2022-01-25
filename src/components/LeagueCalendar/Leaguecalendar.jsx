@@ -3,7 +3,7 @@ import css from './LeagueCalendar.module.css';
 import LeagueMatch from './LeagueMatch/LeagueMatch';
 
 const LeagueCalendar = (props) => {
-    const titleTable={
+    const titleTable = {
         utcDate: 'Дата',
         status: 'Статус',
         matchday: 'Тур',
@@ -23,11 +23,15 @@ const LeagueCalendar = (props) => {
     return (
         <main className={css.main}>
             <div className={css.wrap}>
+                <div className={css.league_container}>
+                        <h1 className={css.title}>Календарь {props.competition.name}</h1>
+                        <h2 className={css.title}>({props.competition.area.name})</h2>
+                </div>
                 <LeagueMatch {...titleTable} />
-                {props.matches.map(match=> (
+                {props.matches.map(match => (
                     <LeagueMatch key={match.id} {...match} />
                 ))}
-                
+
             </div>
         </main>
     )

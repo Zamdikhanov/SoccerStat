@@ -11,7 +11,7 @@
 
 .matchPart_1 {
     display: flex;
-    width: 50%;
+    width: 40%;
 }
 
 .block {
@@ -36,7 +36,7 @@
 
 .matchPart_2 {
     display: flex;
-    width: 50%;
+    width: 60%;
 }
 
 .homeTeam {

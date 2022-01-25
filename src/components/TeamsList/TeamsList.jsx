@@ -1,14 +1,27 @@
 import React from "react";
+import TeamCard from "./TeamCard/TeamCard";
 import css from './TeamsList.module.css';
 
-const TeamsList = () => {
+const TeamList = (props) => {
     return (
         <main className={css.main}>
             <div className={css.wrap}>
-                TeamsList
+                <div className={css.titleContainer}>
+                    <h1 className={css.title}>
+                        Команды {props.leagueTeams.competition.name}
+                    </h1>
+                    <h2 className={css.title}>
+                        ({props.leagueTeams.competition.area.name})
+                    </h2>
+                </div>
+                {
+                    props.leagueTeams.teams.map(teams => (
+                        <TeamCard key={teams.id}  {...teams} />
+                    ))
+                }
             </div>
         </main>
     )
 }
 
-export default TeamsList;
+export default TeamList;

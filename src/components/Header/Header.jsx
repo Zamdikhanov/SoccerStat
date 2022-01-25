@@ -6,7 +6,8 @@ const Header = () => {
         <header className={css.header}>
             <div className={css.wrap}>
                 <div className={css.tagline}>
-                    <h3>Футбол может сделать человека счастливым и знаменитым. </h3>
+                    <img className={css.logo} src='http://www.freepngclipart.com/download/ball/84117-fire-rainbow-wallpaper-cup-mobile-football-phone.png' alt='Logo ball' />
+                    {/* <h3>Футбол может сделать человека счастливым и знаменитым. </h3> */}
                 </div>
                 <div className={css.title}>
                     <h2 className={css.title_text}>SOCCER-STAT</h2>

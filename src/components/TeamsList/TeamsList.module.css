@@ -3,8 +3,23 @@
 }
 
 .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     height: 100%;
-    width: var(--width-wrap);
-    padding: 5px 0px;
-    margin: 0 auto;
+    width: calc(var(--width-wrap) + 20px);
+    margin: 5px auto;
+    padding: 0 -10px;
+}
+
+.titleContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    display: inline;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0.2em 0.5em 0.5em;
 }

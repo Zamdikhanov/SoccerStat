@@ -11,7 +11,7 @@ const Nav = () => {
                         <NavLink to='' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Главная</NavLink>
                     </li>
                     <li className={css.list_item}>
-                        <NavLink to='league-list' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Список лиг</NavLink>
+                        <NavLink to='league-list/' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Список лиг</NavLink>
                     </li>
                     <li className={css.list_item}>
                         <NavLink to='league-calendar' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Календарь лиги</NavLink>

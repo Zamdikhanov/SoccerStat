@@ -1,11 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Navigate, useMatch } from 'react-router-dom';
 import { requestLeagueMatches } from '../../redux/leagueMatchesReducer';
 import LeagueCalendar from './LeagueCalendar';
 
 class LeagueCalendarContainer extends React.Component {
     componentDidMount() {
-        this.props.requestLeagueMatches();
+        if (this.props.match==null) {
+            <Navigate to='/league-list' />
+        } else {
+        this.props.requestLeagueMatches(this.props.match.params.leagueId);
+        }
     }
     render() {
         return (
@@ -20,6 +25,11 @@ let mapStateToProps = (state) => ({
     leagueMathes: state.leagueMatches,
 });
 
+const LeagueCalendarURLMatch = (props) => {
+    const match = useMatch('/league-calendar/:leagueId');
+    return <LeagueCalendarContainer {...props} match={match} />;
+  }
+
 export default connect(mapStateToProps, {
     requestLeagueMatches,
-})(LeagueCalendarContainer);
+})(LeagueCalendarURLMatch);

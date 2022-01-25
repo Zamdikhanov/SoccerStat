@@ -13,8 +13,12 @@ export const API = {
         let response = await instance.get(`competitions/?plan=${accessPlan}`);
         return response.data;
     },
-    async getLeagueMatches(id = 2016) {
+    async getLeagueMatches(id) {
         let responceMatches = await instance.get(`competitions/${id}/matches`);
         return responceMatches.data;
+    },
+    async getLeagueTeams(id) {
+        let responceTeams = await instance.get(`competitions/${id}/teams`);
+        return responceTeams.data;
     }
 }

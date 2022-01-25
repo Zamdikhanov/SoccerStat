@@ -19,11 +19,13 @@
 
 .card__title {
     min-height: 3em;
-    text-align: center;
     font-size: 1.2em;
     line-height: 1.5em;
     font-weight: 700;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card__imageBlock {
@@ -33,10 +35,13 @@
 }
 
 .card__imageContainer {
+    margin: 0 auto 10px;
     position: relative;
-    width: calc(100%/2 - 5px);
+    width: 80%;
     display: block;
     border: 1px solid var(--color-main-gray08);
+    border-radius: 3px;
+    background: #fff;
     overflow: hidden;
 }
 
@@ -74,32 +79,6 @@
     margin-bottom: 10px;
 }
 
-.card__buttonBlock {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card__button {
-    width: calc(100%/2 - 5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--color-main-gray08);
-    text-decoration: none;
-    padding: auto;
-    height: 2em;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
-    transition: background-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s, border ease-in-out 0.3s;
-}
-
-.card:hover .card__button {
-    border: 1px solid #fff;
-}
-
-.card:hover .card__button:hover {
-    border: 1px solid var(--color-main-accent);
-    background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 8px var(--color-main-accent);
+.link {
+    text-align: center;
 }

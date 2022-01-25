@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import css from './LeagueCard.module.css';
 
 const LeagueCard = (props) => {
@@ -25,8 +26,12 @@ const LeagueCard = (props) => {
                 </div>
             </div>
             <div className={css.card__buttonBlock}>
-                <button className={css.card__button}>Календарь лиги</button>
-                <button className={css.card__button}>Список команд</button>
+                <NavLink to={'/league-calendar/' + props.id} className={css.card__button}>
+                <div  onClick={() => window.scrollTo(0, 0)}>Календарь лиги</div>
+                </NavLink>
+                <NavLink to={'/team-list/' + props.id} className={css.card__button}>
+                <div onClick={() => window.scrollTo(0, 0)}>Список команд</div>
+                </NavLink>
             </div>
         </div>
     )
