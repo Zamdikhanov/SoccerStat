@@ -2,7 +2,6 @@ import * as axios from 'axios';
 
 const instance = axios.create({
     baseURL: 'https://api.football-data.org/v2/',
-    // withCredentials: true,
     headers: { "X-Auth-Token": `${process.env.REACT_APP_X_AUTH_TOKEN}` }
 })
 
@@ -20,5 +19,9 @@ export const API = {
     async getLeagueTeams(id) {
         let responceTeams = await instance.get(`competitions/${id}/teams`);
         return responceTeams.data;
+    },
+    async getTeamMatches(id) {
+        let responceTeamMatches = await instance.get(`teams/${id}/matches/`);
+        return responceTeamMatches.data;
     }
 }

@@ -7,7 +7,6 @@ import { Navigate, useMatch } from 'react-router-dom';
 class TeamListContainer extends React.Component {
 
     componentDidMount() {
-        // this.props.requestLeagueTeams(this.props.match.params.leagueId);
         if (this.props.match ) {
             this.props.requestLeagueTeams(this.props.match.params.leagueId);
         } else {
@@ -15,14 +14,6 @@ class TeamListContainer extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-        // this.props.requestLeagueTeams(this.props.match.params.leagueId);
-        if (this.props.match) {
-            this.props.requestLeagueTeams(this.props.match.params.leagueId);
-        } else {
-            <Navigate to='/league-list' replace={true} />
-        }
-    }
 
     render() {
         return (

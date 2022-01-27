@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import css from './TeamCard.module.css';
 
 const TeamCard = (props) => {
@@ -17,6 +17,9 @@ const TeamCard = (props) => {
                     <div className={css.link}>
                         <a href={props.website} target="_blank" rel="noopener noreferrer">{props.website}</a>
                     </div>
+                    <NavLink to={'/team-calendar/' + props.id} className={css.card__button}>
+                        <div onClick={() => window.scrollTo(0, 0)}>Календарь команды</div>
+                    </NavLink>
                 </div>
             </div>
         </div>

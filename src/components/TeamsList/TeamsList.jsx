@@ -15,8 +15,8 @@ const TeamList = (props) => {
                     </h2>
                 </div>
                 {
-                    props.leagueTeams.teams.map(teams => (
-                        <TeamCard key={teams.id}  {...teams} />
+                    props.leagueTeams.teams.map(team => (
+                        <TeamCard key={team.id}  {...team} />
                     ))
                 }
             </div>
