@@ -28,7 +28,7 @@ let mapStateToProps = (state) => ({
 });
 
 const TeamListURLMatch = (props) => {
-    const match = useMatch('/team-list/:leagueId');
+    const match = useMatch('/league-list/team-list/:leagueId');
     return <TeamListContainer {...props} match={match} />;
 }
 

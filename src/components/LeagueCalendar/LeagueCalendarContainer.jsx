@@ -26,7 +26,7 @@ let mapStateToProps = (state) => ({
 });
 
 const LeagueCalendarURLMatch = (props) => {
-    const match = useMatch('/league-calendar/:leagueId');
+    const match = useMatch('/league-list/league-calendar/:leagueId');
     return <LeagueCalendarContainer {...props} match={match} />;
   }
 

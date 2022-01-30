@@ -22,7 +22,7 @@ class TeamCalendarContainer extends React.Component {
 }
 
 const TeamCalendarURLMatch = (props) => {
-    const match = useMatch('/team-calendar/:teamId');
+    const match = useMatch('/league-list/team-list/team-calendar/:teamId');
     return <TeamCalendarContainer {...props} match={match} />;
 }
 

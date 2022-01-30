@@ -11,16 +11,16 @@ const Nav = () => {
                         <NavLink to='' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Главная</NavLink>
                     </li>
                     <li className={css.list_item}>
-                        <NavLink to='league-list/' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Список лиг</NavLink>
+                        <NavLink to='league-list' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Список лиг</NavLink>
                     </li>
                     <li className={css.list_item}>
-                        <NavLink to='league-calendar' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Календарь лиги</NavLink>
+                        <NavLink to='league-list/league-calendar' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`)  : css.navlink }>Календарь лиги</NavLink>
                     </li>
                     <li className={css.list_item}>
-                        <NavLink to='team-list' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`) : css.navlink }>Список команд</NavLink>
+                        <NavLink to='/league-list/team-list' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`) : css.navlink }>Список команд</NavLink>
                     </li>
                     <li className={css.list_item}>
-                        <NavLink to='team-calendar' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`) : css.navlink }>Календарь команды</NavLink>
+                        <NavLink to='/league-list/team-list/team-calendar' className = { navData => navData.isActive ? (`${css.navlink}  ${css.navlink_active}`) : css.navlink }>Календарь команды</NavLink>
                     </li>
                 </ul>
             </div>

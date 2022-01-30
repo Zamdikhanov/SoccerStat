@@ -26,10 +26,10 @@ const LeagueCard = (props) => {
                 </div>
             </div>
             <div className={css.card__buttonBlock}>
-                <NavLink to={'/league-calendar/' + props.id} className={css.card__button}>
+                <NavLink to={'/league-list/league-calendar/' + props.id} className={css.card__button}>
                 <div  onClick={() => window.scrollTo(0, 0)}>Календарь лиги</div>
                 </NavLink>
-                <NavLink to={'/team-list/' + props.id} className={css.card__button}>
+                <NavLink to={'/league-list/team-list/' + props.id} className={css.card__button}>
                 <div onClick={() => window.scrollTo(0, 0)}>Список команд</div>
                 </NavLink>
             </div>

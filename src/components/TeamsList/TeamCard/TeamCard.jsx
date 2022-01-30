@@ -17,7 +17,7 @@ const TeamCard = (props) => {
                     <div className={css.link}>
                         <a href={props.website} target="_blank" rel="noopener noreferrer">{props.website}</a>
                     </div>
-                    <NavLink to={'/team-calendar/' + props.id} className={css.card__button}>
+                    <NavLink to={'/league-list/team-list/team-calendar/' + props.id} className={css.card__button}>
                         <div onClick={() => window.scrollTo(0, 0)}>Календарь команды</div>
                     </NavLink>
                 </div>
