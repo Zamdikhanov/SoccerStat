@@ -3,6 +3,7 @@ import css from './LeagueCalendar.module.css';
 import LeagueMatch from './LeagueMatch/LeagueMatch';
 
 const LeagueCalendar = (props) => {
+
     const titleTable = {
         utcDate: 'Дата',
         status: 'Статус',
@@ -20,6 +21,7 @@ const LeagueCalendar = (props) => {
             name: 'Команда в гостях'
         },
     }
+    
     return (
         <main className={css.main}>
             <div className={css.wrap}>

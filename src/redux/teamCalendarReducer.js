@@ -119,7 +119,7 @@ const teamCalendarReducer = (state = initialState, action) => {
 
 export const setTeamMatches = (matches) => ({ type: SET_TEAM_MATCHES, matches: matches });
 
-export const requestLeagueMatches = (id) => {
+export const requestTeamMatches = (id) => {
     return (dispatch) => {
         API.getTeamMatches(id).then(data => {
             dispatch(setTeamMatches(data));

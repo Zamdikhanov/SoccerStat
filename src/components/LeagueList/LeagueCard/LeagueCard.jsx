@@ -10,27 +10,47 @@ const LeagueCard = (props) => {
             </div>
             <div className={css.card__imageBlock}>
                 <div className={css.card__imageContainer}>
-                    <img className={css.image} src={props.area.ensignUrl} alt='flag' />
+                    <img className={css.image}
+                        src={props.area.ensignUrl}
+                        alt='flag' />
                 </div>
                 <div className={css.card__imageContainer}>
-                    <img className={css.image} src={props.emblemUrl} alt='emblem' />
+                    <img className={css.image}
+                        src={props.emblemUrl}
+                        alt='emblem' />
                 </div>
             </div>
             <div className={css.card__dataBlock}>
                 <span>{props.area.name}</span>
                 <div>
-                    <div>Начало сезона: {props.currentSeason.startDate}</div>
-                    <div>Конец сезона: {props.currentSeason.endDate}</div>
-                    <div>День чемпионата: {props.currentSeason.currentMatchday}</div>
-                    <div>Победитель: {(props.currentSeason.winner!=null) ? props.currentSeason.winner.name : `неопределён`}</div>
+                    <div>
+                        Начало сезона: {props.currentSeason.startDate}
+                    </div>
+                    <div>
+                        Конец сезона: {props.currentSeason.endDate}
+                    </div>
+                    <div>
+                        День чемпионата: {props.currentSeason.currentMatchday}
+                    </div>
+                    <div>
+                        Победитель: {(props.currentSeason.winner != null)
+                            ? props.currentSeason.winner.name
+                            : `неопределён`}
+                    </div>
                 </div>
             </div>
             <div className={css.card__buttonBlock}>
-                <NavLink to={'/league-list/league-calendar/' + props.id} className={css.card__button}>
-                <div  onClick={() => window.scrollTo(0, 0)}>Календарь лиги</div>
+                <NavLink to={'/league-list/league-calendar/' + props.id}
+                    className={css.card__button}>
+                    <div onClick={() => window.scrollTo(0, 0)}>
+                        Календарь лиги
+                    </div>
                 </NavLink>
-                <NavLink to={'/league-list/team-list/' + props.id} className={css.card__button}>
-                <div onClick={() => window.scrollTo(0, 0)}>Список команд</div>
+                <NavLink to={'/league-list/team-list/' + props.id}
+                    className={css.card__button}>
+                    <div onClick={() => window.scrollTo(0, 0)}>
+                        Список команд
+                    </div>
                 </NavLink>
             </div>
         </div>

@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import LeagueList from './LeagueList';
 import { requestLeague } from './../../redux/leagueReducer';
 
-class LeagueListContainer extends React.Component {
+const LeagueListContainer = (props) => {
 
-    componentDidMount() {
-        this.props.requestLeague();
-    }
+    useEffect(() => {
+        props.requestLeague();
+    }, [])
 
-    render() {
-        return (
-            <>
-                <LeagueList {...this.props} />
-            </>)
-    }
+    return (
+        <>
+            <LeagueList {...props} />
+        </>)
 }
 
 let mapStateToProps = (state) => ({

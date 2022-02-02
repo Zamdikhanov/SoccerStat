@@ -6,10 +6,20 @@ const Footer = () => {
         <footer className={css.footer}>
             <div className={css.wrap}>
                 <div>
-                    Замдиханов 2022
+                    <a className={css.link}
+                        href='https://github.com/Zamdikhanov'
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Замдиханов 2022
+                    </a>
                 </div>
                 <div>
-                    for SimbirSoft
+                    <a className={css.link}
+                        href='https://www.simbirsoft.com/'
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        for SimbirSoft
+                    </a>
                 </div>
             </div>
         </footer >

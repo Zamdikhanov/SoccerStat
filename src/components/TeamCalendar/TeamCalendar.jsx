@@ -22,8 +22,10 @@ const TeamCalendar = (props) => {
     }
 
     const searchTeamName = () => {
-        if (props.match.params.teamId == props.teamCalendar.matches[0].homeTeam.id) return props.teamCalendar.matches[0].homeTeam.name;
-        if (props.match.params.teamId == props.teamCalendar.matches[0].awayTeam.id) return props.teamCalendar.matches[0].awayTeam.name;
+        if (props.match.params.teamId == props.teamCalendar.matches[0].homeTeam.id)
+            return props.teamCalendar.matches[0].homeTeam.name;
+        if (props.match.params.teamId == props.teamCalendar.matches[0].awayTeam.id)
+            return props.teamCalendar.matches[0].awayTeam.name;
         return 'error';
     }
 
@@ -31,8 +33,12 @@ const TeamCalendar = (props) => {
         <main className={css.main}>
             <div className={css.wrap}>
                 <div className={css.league_container}>
-                    <h1 className={css.title}>Календарь команды</h1>
-                    <h2 className={css.title}>{searchTeamName()}</h2>
+                    <h1 className={css.title}>
+                        Календарь команды
+                    </h1>
+                    <h2 className={css.title}>
+                        {searchTeamName()}
+                    </h2>
                 </div>
                 <TeamMatch {...titleTable} />
                 {props.teamCalendar.matches.map(match => (

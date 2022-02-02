@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Navigate, useMatch } from 'react-router-dom';
-import { requestLeagueMatches } from './../../redux/teamCalendarReducer';
+import { requestTeamMatches } from './../../redux/teamCalendarReducer';
 import TeamCalendar from './TeamCalendar';
 
-class TeamCalendarContainer extends React.Component {
-    componentDidMount() {
-        if (this.props.match == null) {
-            <Navigate to='/league-list' />
-        } else {
-            this.props.requestLeagueMatches(this.props.match.params.teamId);
-        }
-    }
-    render() {
-        return (
-            <>
-                <TeamCalendar {...this.props} />
-            </>
-        )
-    }
+const TeamCalendarContainer = (props) => {
+
+    let teamId =props.match.params.teamId;
+    useEffect(() => {
+        props.requestLeagueMatches(teamId);
+        console.log('33');
+    }, props.match.params)
+
+    return (
+        <>
+            <TeamCalendar {...this.props} />
+        </>
+    )
 }
 
 const TeamCalendarURLMatch = (props) => {
@@ -31,5 +29,5 @@ let mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-    requestLeagueMatches,
+    requestTeamMatches,
 })(TeamCalendarURLMatch);

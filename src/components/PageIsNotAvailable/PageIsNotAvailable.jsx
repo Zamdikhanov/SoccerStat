@@ -1,17 +1,17 @@
 import React from "react";
 import css from './PageIsNotAvailable.module.css';
 
-const Home = () => {
+const PageIsNotAvailable = () => {
     return (
         <main className={css.main}>
             <div className={css.wrap}>
                 <div>
-                Данная страница не найдена.
+                Данная страница не доступна. 
                 </div>
-                <NavLink to='league-list' >Перейти к списку лиг</NavLink>
+                <NavLink to='/' >Перейти на главную страницу</NavLink>
             </div>
         </main>
     )
 }
 
-export default Home;
+export default PageIsNotAvailable;

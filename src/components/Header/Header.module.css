@@ -63,8 +63,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all ease-in-out 0.5s;
+}
+
+.title:hover {
+    letter-spacing: 0.07em;
+    text-shadow: 0px 0px 5px var(--color-main-gray), 0px 0px 10px var(--color-main-accent);
+}
+
+.title_link {
+    text-decoration: none;
 }
 
 .title_text {
     user-select: none;
+    color: #fff;
 }

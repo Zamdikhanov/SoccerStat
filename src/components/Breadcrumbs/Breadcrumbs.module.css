@@ -4,6 +4,7 @@
     width: min-content;
     margin: 0 auto;
     background-color: var(--color-main-gray08);
+    border-top: 5px solid var(--color-main-accent);
     color: #fff;
     overflow: hidden;
 }

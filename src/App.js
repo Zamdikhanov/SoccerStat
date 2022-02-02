@@ -6,7 +6,6 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import LeagueCalendarContainer from './components/LeagueCalendar/LeagueCalendarContainer';
 import LeagueListContainer from './components/LeagueList/LeagueListContainer';
-import Nav from './components/Nav/Nav';
 import NotFound from './components/NotFound/NotFound';
 import TeamCalendarContainer from './components/TeamCalendar/TeamCalendarContainer';
 import TeamsListContainer from './components/TeamsList/TeamsListContainer';
@@ -17,7 +16,6 @@ function App() {
     <BrowserRouter>
       <div className="App" >
         <Header />
-        <Nav />
         <Breadcrumbs />
         <Routes>
           <Route path="/league-list/*" element={<LeagueListContainer />} />
