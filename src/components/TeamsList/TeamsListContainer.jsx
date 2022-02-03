@@ -1,26 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import TeamsList from './TeamsList';
 import { requestLeagueTeams } from './../../redux/leagueTeamsReducer';
-import { Navigate, useMatch } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
+import Preloader from '../../common/Preloader/Preloader';
 
-class TeamListContainer extends React.Component {
+const TeamListContainer = (props) => {
 
-    componentDidMount() {
-        if (this.props.match ) {
-            this.props.requestLeagueTeams(this.props.match.params.leagueId);
-        } else {
-            <Navigate to='/league-list' replace={true} />
-        }
-    }
+    useEffect(() => {
+        props.requestLeagueTeams(props.match.params.leagueId);
+    }, [props.match.params])
 
-
-    render() {
-        return (
-            <>
-                <TeamsList {...this.props} />
-            </>)
-    }
+    return (
+        <>
+            {props.leagueTeams.isLoading
+                ? <Preloader />
+                : <TeamsList {...props} />
+            }
+        </>
+    )
 }
 
 let mapStateToProps = (state) => ({

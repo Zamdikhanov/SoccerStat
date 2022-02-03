@@ -1,20 +1,22 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Navigate, useMatch } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
+import Preloader from '../../common/Preloader/Preloader';
 import { requestTeamMatches } from './../../redux/teamCalendarReducer';
 import TeamCalendar from './TeamCalendar';
 
 const TeamCalendarContainer = (props) => {
 
-    let teamId =props.match.params.teamId;
     useEffect(() => {
-        props.requestLeagueMatches(teamId);
-        console.log('33');
-    }, props.match.params)
+        props.requestTeamMatches(props.match.params.teamId);
+    }, [props.match.params])
 
     return (
         <>
-            <TeamCalendar {...this.props} />
+            {props.teamCalendar.isLoading
+                ? <Preloader />
+                : <TeamCalendar {...props} />
+            }
         </>
     )
 }

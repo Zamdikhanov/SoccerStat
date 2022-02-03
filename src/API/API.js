@@ -9,19 +9,27 @@ const accessPlan = 'TIER_ONE';
 
 export const API = {
     async getLeague() {
-        let response = await instance.get(`competitions/?plan=${accessPlan}`);
-        return response.data;
+        try {
+            let response = await instance.get(`competitions/?plan=${accessPlan}`);
+            return response.data;
+        } catch (e) { console.log(e) }
     },
     async getLeagueMatches(id) {
-        let responceMatches = await instance.get(`competitions/${id}/matches`);
-        return responceMatches.data;
+        try {
+            let responceMatches = await instance.get(`competitions/${id}/matches`);
+            return responceMatches.data;
+        } catch (e) { console.log(e) }
     },
     async getLeagueTeams(id) {
-        let responceTeams = await instance.get(`competitions/${id}/teams`);
-        return responceTeams.data;
+        try {
+            let responceTeams = await instance.get(`competitions/${id}/teams`);
+            return responceTeams.data;
+        } catch (e) { console.log(e) }
     },
     async getTeamMatches(id) {
-        let responceTeamMatches = await instance.get(`teams/${id}/matches/`);
-        return responceTeamMatches.data;
+        try {
+            let responceTeamMatches = await instance.get(`teams/${id}/matches/`);
+            return responceTeamMatches.data;
+        } catch (e) { console.log(e) }
     }
 }

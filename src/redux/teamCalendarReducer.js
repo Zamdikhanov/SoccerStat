@@ -1,6 +1,7 @@
 import { API } from './../API/API';
 
 const SET_TEAM_MATCHES = 'SET_TEAM_MATCHES';
+const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING';
 
 let initialState = {
     count: 34,
@@ -101,6 +102,7 @@ let initialState = {
             }
         ]
     }, ],
+    isLoading: false,
 }
 
 const teamCalendarReducer = (state = initialState, action) => {
@@ -110,6 +112,11 @@ const teamCalendarReducer = (state = initialState, action) => {
                 ...state,
                 ...action.matches
             });
+        case TOGGLE_IS_LOADING:
+            return ({
+                ...state,
+                isLoading: action.isLoading,
+            });
 
         default:
             return state;
@@ -118,11 +125,14 @@ const teamCalendarReducer = (state = initialState, action) => {
 
 
 export const setTeamMatches = (matches) => ({ type: SET_TEAM_MATCHES, matches: matches });
+export const toogleIsLoadingTeamMatches = (isLoading) => ({ type: TOGGLE_IS_LOADING, isLoading: isLoading });
 
 export const requestTeamMatches = (id) => {
     return (dispatch) => {
+        dispatch(toogleIsLoadingTeamMatches(true));
         API.getTeamMatches(id).then(data => {
             dispatch(setTeamMatches(data));
+            dispatch(toogleIsLoadingTeamMatches(false));
         });
     }
 }

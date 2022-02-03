@@ -10,14 +10,18 @@ const LeagueCard = (props) => {
             </div>
             <div className={css.card__imageBlock}>
                 <div className={css.card__imageContainer}>
-                    <img className={css.image}
-                        src={props.area.ensignUrl}
-                        alt='flag' />
+                    {props.area.ensignUrl &&
+                        <img className={css.image}
+                            src={props.area.ensignUrl}
+                            alt='flag' />
+                    }
                 </div>
                 <div className={css.card__imageContainer}>
-                    <img className={css.image}
-                        src={props.emblemUrl}
-                        alt='emblem' />
+                    {props.emblemUrl &&
+                        <img className={css.image}
+                            src={props.emblemUrl}
+                            alt='emblem' />
+                    }
                 </div>
             </div>
             <div className={css.card__dataBlock}>

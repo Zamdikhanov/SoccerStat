@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useMatch } from 'react-router-dom';
+import Preloader from '../../common/Preloader/Preloader';
 import { requestLeagueMatches } from '../../redux/leagueMatchesReducer';
 import LeagueCalendar from './LeagueCalendar';
 
@@ -8,11 +9,14 @@ const LeagueCalendarContainer = (props) => {
 
     useEffect(() => {
         props.requestLeagueMatches(props.match.params.leagueId);
-    }, props.match.params);
-    
+    }, [props.match.params]);
+
     return (
         <>
-            <LeagueCalendar {...props.leagueMathes} />
+            {props.leagueMathes.isLoading
+                ? <Preloader />
+                : <LeagueCalendar {...props.leagueMathes} />
+            }
         </>
     )
 }

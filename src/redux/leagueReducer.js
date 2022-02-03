@@ -1,6 +1,7 @@
 import { API } from './../API/API';
 
 const SET_LEAGUE = 'SET_LEAGUE';
+const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING';
 
 let initialState = {
     count: 1,
@@ -29,6 +30,7 @@ let initialState = {
         numberOfAvailableSeasons: 5,
         lastUpdated: "2021-07-20T18:42:17Z"
     }, ],
+    isLoading: false,
 }
 
 const leagueReducer = (state = initialState, action) => {
@@ -38,6 +40,11 @@ const leagueReducer = (state = initialState, action) => {
                 ...state,
                 ...action.competitions
             });
+        case TOGGLE_IS_LOADING:
+            return ({
+                ...state,
+                isLoading: action.isLoading,
+            });
 
         default:
             return state;
@@ -46,11 +53,14 @@ const leagueReducer = (state = initialState, action) => {
 
 
 export const setLeague = (competitions) => ({ type: SET_LEAGUE, competitions: competitions });
+export const toogleIsLoadingLeague = (isLoading) => ({ type: TOGGLE_IS_LOADING, isLoading: isLoading });
 
 export const requestLeague = () => {
     return (dispatch) => {
+        dispatch(toogleIsLoadingLeague(true));
         API.getLeague().then(data => {
             dispatch(setLeague(data));
+            dispatch(toogleIsLoadingLeague(false));
         });
     }
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import LeagueList from './LeagueList';
 import { requestLeague } from './../../redux/leagueReducer';
+import Preloader from '../../common/Preloader/Preloader';
 
 const LeagueListContainer = (props) => {
 
@@ -11,7 +12,10 @@ const LeagueListContainer = (props) => {
 
     return (
         <>
-            <LeagueList {...props} />
+            {props.league.isLoading
+                ? <Preloader />
+                : <LeagueList {...props} />
+            }
         </>)
 }
 
