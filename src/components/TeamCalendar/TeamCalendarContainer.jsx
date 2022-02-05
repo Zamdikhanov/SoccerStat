@@ -1,29 +1,27 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useMatch } from 'react-router-dom';
+import { useLocation, useMatch, useSearchParams } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
 import { requestTeamMatches } from './../../redux/teamCalendarReducer';
 import TeamCalendar from './TeamCalendar';
 
 const TeamCalendarContainer = (props) => {
 
+    const [searchParams, setSearchParams] = useSearchParams();
+    const teamId = searchParams.get('teamId') || '';
+
     useEffect(() => {
-        props.requestTeamMatches(props.match.params.teamId);
-    }, [props.match.params])
+        props.requestTeamMatches(teamId);
+    }, [teamId])
 
     return (
         <>
             {props.teamCalendar.isLoading
                 ? <Preloader />
-                : <TeamCalendar {...props} />
+                : <TeamCalendar {...props} teamId={teamId} />
             }
         </>
     )
-}
-
-const TeamCalendarURLMatch = (props) => {
-    const match = useMatch('/league-list/team-list/team-calendar/:teamId');
-    return <TeamCalendarContainer {...props} match={match} />;
 }
 
 let mapStateToProps = (state) => ({
@@ -32,4 +30,4 @@ let mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, {
     requestTeamMatches,
-})(TeamCalendarURLMatch);
+})(TeamCalendarContainer);

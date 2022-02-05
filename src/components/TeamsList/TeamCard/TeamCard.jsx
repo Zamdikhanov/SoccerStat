@@ -24,7 +24,7 @@ const TeamCard = (props) => {
                         </a>
                     </div>
                     <NavLink
-                        to={'/league-list/team-list/team-calendar/' + props.id}
+                        to={'/league-list/team-list/team-calendar?teamId=' + props.id}
                         className={css.card__button}>
                         <div onClick={() => window.scrollTo(0, 0)}>
                             Календарь команды

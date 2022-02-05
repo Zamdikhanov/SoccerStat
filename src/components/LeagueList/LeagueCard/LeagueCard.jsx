@@ -44,13 +44,13 @@ const LeagueCard = (props) => {
                 </div>
             </div>
             <div className={css.card__buttonBlock}>
-                <NavLink to={'/league-list/league-calendar/' + props.id}
+                <NavLink to={'/league-list/league-calendar?leagueId=' + props.id}
                     className={css.card__button}>
                     <div onClick={() => window.scrollTo(0, 0)}>
                         Календарь лиги
                     </div>
                 </NavLink>
-                <NavLink to={'/league-list/team-list/' + props.id}
+                <NavLink to={'/league-list/team-list?leagueId=' + props.id}
                     className={css.card__button}>
                     <div onClick={() => window.scrollTo(0, 0)}>
                         Список команд

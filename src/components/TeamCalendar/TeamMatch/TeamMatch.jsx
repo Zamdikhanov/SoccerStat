@@ -16,7 +16,7 @@ const TeamMatch = (props) => {
                 </div>
             </div>
             <div className={css.matchPart_2}>
-                <div className={`${css.homeTeam} ${css.block} ${((props.score.winner === 'AWAY_TEAM')
+                <div className={`${css.homeTeam} ${css.block} ${((props.score.winner === 'HOME_TEAM')
                     ? (css.winner)
                     : '')}`}>
                     {props.homeTeam.name}
@@ -24,7 +24,7 @@ const TeamMatch = (props) => {
                 <div className={css.score + ' ' + css.block}>
                     {props.score.fullTime.homeTeam}:{props.score.fullTime.awayTeam}
                 </div>
-                <div className={`${css.awayTeam} ${css.block} ${((props.score.winner === 'HOME_TEAM')
+                <div className={`${css.awayTeam} ${css.block} ${((props.score.winner === 'AWAY_TEAM')
                     ? (css.winner)
                     : '')}`}>
                     {props.awayTeam.name}

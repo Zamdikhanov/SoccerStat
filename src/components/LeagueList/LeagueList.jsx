@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import InputSearch from "../../common/InputSearch/InputSearch";
 import LeagueCard from "./LeagueCard/LeagueCard";
 import css from './LeagueList.module.css';
 
 const LeagueList = (props) => {
-    const [inputValue, setInputValue] = useState('');
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const inputValue = searchParams.get('leagueName') || '';
     const [competitionsFiltered, setCompetitionsFiltered] = useState([]);
 
     useEffect(() => {
         const { competitions = [] } = props.league;
-        const regExp = new RegExp(inputValue, 'i');
         setCompetitionsFiltered(competitions.filter((el) => {
-            return regExp.test(el.name);
+            return el.name.toLowerCase().includes(inputValue.toLowerCase())
+                || el.area.name.toLowerCase().includes(inputValue.toLowerCase());
         }));
-        console.log(competitionsFiltered);
     }, [inputValue]);
 
     return (
         <main className={css.main}>
             <div className={css.wrap}>
-                <InputSearch inputValue={inputValue} setInputValue={setInputValue} />
+                <InputSearch inputValue={inputValue} searchParams={searchParams} setSearchParams={setSearchParams} searchName='leagueName' />
                 {
                     competitionsFiltered.map(league => (
                         <LeagueCard key={league.id}  {...league} />

@@ -1,15 +1,18 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useMatch } from 'react-router-dom';
+import { Navigate, useLocation, useSearchParams } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
 import { requestLeagueMatches } from '../../redux/leagueMatchesReducer';
 import LeagueCalendar from './LeagueCalendar';
 
 const LeagueCalendarContainer = (props) => {
+    
+    const [searchParams, setSearchParams] = useSearchParams();
+    const leagueId = searchParams.get('leagueId') || '';
 
     useEffect(() => {
-        props.requestLeagueMatches(props.match.params.leagueId);
-    }, [props.match.params]);
+        props.requestLeagueMatches(leagueId);
+    }, [leagueId]);
 
     return (
         <>
@@ -25,11 +28,7 @@ let mapStateToProps = (state) => ({
     leagueMathes: state.leagueMatches,
 });
 
-const LeagueCalendarURLMatch = (props) => {
-    const match = useMatch('/league-list/league-calendar/:leagueId');
-    return <LeagueCalendarContainer {...props} match={match} />;
-}
 
 export default connect(mapStateToProps, {
     requestLeagueMatches,
-})(LeagueCalendarURLMatch);
+})(LeagueCalendarContainer);

@@ -22,9 +22,9 @@ const TeamCalendar = (props) => {
     }
 
     const searchTeamName = () => {
-        if (props.match.params.teamId == props.teamCalendar.matches[0].homeTeam.id)
+        if (props.teamId == props.teamCalendar.matches[0].homeTeam.id)
             return props.teamCalendar.matches[0].homeTeam.name;
-        if (props.match.params.teamId == props.teamCalendar.matches[0].awayTeam.id)
+        if (props.teamId == props.teamCalendar.matches[0].awayTeam.id)
             return props.teamCalendar.matches[0].awayTeam.name;
         return 'error';
     }

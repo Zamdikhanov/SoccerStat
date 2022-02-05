@@ -18,10 +18,10 @@ function App() {
         <Header />
         <Breadcrumbs />
         <Routes>
-          <Route path="/league-list/*" element={<LeagueListContainer />} />
-          <Route path="/league-list/league-calendar/*" element={<LeagueCalendarContainer />} />
-          <Route path="/league-list/team-list/*" element={<TeamsListContainer />}/>
-          <Route path="/league-list/team-list/team-calendar/*" element={<TeamCalendarContainer />} />
+          <Route path="/league-list" element={<LeagueListContainer />} />
+          <Route path="/league-list/league-calendar" element={<LeagueCalendarContainer />} />
+          <Route path="/league-list/team-list" element={<TeamsListContainer />}/>
+          <Route path="/league-list/team-list/team-calendar" element={<TeamCalendarContainer />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

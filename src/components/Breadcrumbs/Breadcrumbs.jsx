@@ -1,14 +1,25 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useSearchParams } from 'react-router-dom';
 import css from './Breadcrumbs.module.css';
 
 const Breadcrumbs = () => {
 
+    // const [searchParams, setSearchParams] = useSearchParams();
+    // searchParams.get('leagueId');
+
     const tabNames = {
-        'league-list': 'Список лиг',
-        'league-calendar': 'Календарь лиги',
-        'team-list': 'Команды лиги',
-        'team-calendar': 'Календарь команды'
+        'league-list': {
+            name: 'Список лиг'
+        },
+        'league-calendar':{
+            name: 'Календарь лиги'
+        },
+        'team-list':{
+            name: 'Команды лиги'
+        },
+        'team-calendar':{
+            name: 'Календарь команды'
+        }
     }
     let location = useLocation();
     const pathNames = location.pathname.split("/").filter((x) => (x !== ""));
@@ -20,14 +31,14 @@ const Breadcrumbs = () => {
             return (
                 <li className={css.list_item} key={pathElement} >
                     <div className={css.last}>
-                        {tabNames[pathElement] || pathElement}
+                        {tabNames[pathElement].name || pathElement}
                     </div>
                 </li>)
         } else {
             return (
                 <li className={css.list_item}  key={pathElement}>
                     <NavLink className={css.navlink} to={routeTo}>
-                        {tabNames[pathElement] || pathElement}
+                        {tabNames[pathElement].name || pathElement}
                     </NavLink>
                 </li>
             )

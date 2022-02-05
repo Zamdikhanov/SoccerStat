@@ -22,7 +22,7 @@ const Home = () => {
                                 <p>У нас самая точная и свежая статистика.</p>
                             </div>
                             <NavLink className={css.block_content__link_1}
-                                to='/league-list/'
+                                to='/league-list'
                                 onClick={() => window.scrollTo(0, 0)}>
                                 <div className={css.block_content__link_button_1}>
                                     Узнать больше
@@ -47,7 +47,7 @@ const Home = () => {
                 <div className={css.block}>
                     <div className={css.block_content}>
                         <NavLink className={css.block_content__link}
-                            to='/league-list/'
+                            to='/league-list'
                             onClick={() => window.scrollTo(0, 0)}>
                             <div className={css.block_content__link_button}>
                                 Перейти к списку лиг

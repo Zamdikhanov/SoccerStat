@@ -11,7 +11,7 @@ const LeagueMatch = (props) => {
             </div>
             <div className={css.matchPart_2}>
                 <div className={`${css.homeTeam} ${css.block} 
-                ${((props.score.winner === 'AWAY_TEAM')
+                ${((props.score.winner === 'HOME_TEAM')
                         ? (css.winner)
                         : '')}`}>
                     {props.homeTeam.name}
@@ -20,7 +20,7 @@ const LeagueMatch = (props) => {
                     {props.score.fullTime.homeTeam}:{props.score.fullTime.awayTeam}
                 </div>
                 <div className={`${css.awayTeam} ${css.block} 
-                ${((props.score.winner === 'HOME_TEAM')
+                ${((props.score.winner === 'AWAY_TEAM')
                         ? (css.winner)
                         : '')}`}>
                     {props.awayTeam.name}
