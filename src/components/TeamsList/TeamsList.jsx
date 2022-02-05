@@ -9,7 +9,7 @@ const TeamList = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const inputValue = searchParams.get('teamName') || '';
     const [teamsFiltered, setTeamsFiltered] = useState([]); console.log(props);
-
+    
     useEffect(() => {
         const { teams = [] } = props.leagueTeams;
         setTeamsFiltered(teams.filter((el) => {

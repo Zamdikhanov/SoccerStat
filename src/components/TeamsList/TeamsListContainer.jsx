@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import TeamsList from './TeamsList';
 import { requestLeagueTeams } from './../../redux/leagueTeamsReducer';
-import { useLocation, useMatch, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
 
 const TeamListContainer = (props) => {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const leagueId = searchParams.get('leagueId') || '';
 
     useEffect(() => {

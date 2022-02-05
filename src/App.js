@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs';
 import Footer from './components/Footer/Footer';
@@ -13,7 +13,7 @@ import TeamsListContainer from './components/TeamsList/TeamsListContainer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App" >
         <Header />
         <Breadcrumbs />
@@ -27,7 +27,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

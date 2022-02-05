@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useLocation, useMatch, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
 import { requestTeamMatches } from './../../redux/teamCalendarReducer';
 import TeamCalendar from './TeamCalendar';
 
 const TeamCalendarContainer = (props) => {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const teamId = searchParams.get('teamId') || '';
+    const requestTeamMatches = (teamId) => props.requestTeamMatches(teamId);
 
     useEffect(() => {
-        props.requestTeamMatches(teamId);
+        requestTeamMatches(teamId);
     }, [teamId])
 
     return (
