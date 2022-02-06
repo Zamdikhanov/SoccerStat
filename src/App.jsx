@@ -1,3 +1,4 @@
+import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs';
