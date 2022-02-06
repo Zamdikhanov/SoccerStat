@@ -7,6 +7,9 @@
     border-top: 5px solid var(--color-main-accent);
     color: #fff;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .wrap {
@@ -14,6 +17,10 @@
     width: var(--width-wrap);
     display: flex;
     margin: 0 auto;
+}
+
+.nav_burger {
+    display: none;
 }
 
 .list {
@@ -71,4 +78,103 @@
 
 .navlink_active {
     color: var(--color-additional-accent);
+}
+
+@media (max-width: 1420px) {
+    .nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav_burger {
+        display: none;
+    }
+    .nav_btn {
+        display: block;
+        margin: auto 5px;
+        cursor: pointer;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #fff;
+        background: transparent;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+    .nav_burger {
+        z-index: 4;
+        position: relative;
+        padding: 5px 8px 5px 36px;
+    }
+    .nav_burger span,
+    .nav_burger::before,
+    .nav_burger::after {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 22px;
+        background-color: #fff;
+        margin: 0 auto;
+        left: 8px;
+        transition: all 0.5s ease 0s;
+    }
+    .nav_burger span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .nav_burger::before,
+    .nav_burger::after {
+        content: '';
+    }
+    .nav_burger::before {
+        top: 6px;
+    }
+    .nav_burger::after {
+        bottom: 6px;
+    }
+    .nav_burger.menu_button__active span {
+        transform: scale(0)
+    }
+    .nav_burger.menu_button__active::before {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, -50%);
+    }
+    .nav_burger.menu_button__active::after {
+        bottom: 50%;
+        transform: rotate(-45deg) translate(0px, 50%);
+    }
+    .list {
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.90);
+        padding: 130px 20px 30px;
+        transition: left 0.4s ease 0s;
+        overflow: auto;
+        display: block;
+    }
+    .list_hide {
+        left: -100%;
+    }
+    .list_item {
+        padding: 0.8em;
+        height: initial;
+        border: 1px solid #fff;
+        transform: skewX(0deg);
+        margin-bottom: 5px;
+    }
+    .list_item:first-child {
+        padding-left: 0;
+    }
+    .navlink,
+    .last {
+        padding: 0.5em;
+        height: initial;
+        transform: skewX(00deg);
+    }
 }

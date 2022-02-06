@@ -35,3 +35,13 @@ select {
     flex-direction: column;
     min-height: 100%;
 }
+
+body.lock {
+    overflow: hidden;
+}
+
+@media (max-width: 1420px) {
+     :root {
+        --width-wrap: 100%;
+    }
+}

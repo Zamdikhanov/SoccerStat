@@ -21,3 +21,14 @@
     font-weight: 700;
     margin: 0.2em 0.5em 0.5em;
 }
+
+.titleTable {
+    display: block;
+    background-color: var(--color-main-accent);
+}
+
+@media (max-width: 900px) {
+    .titleTable {
+        display: none;
+    }
+}

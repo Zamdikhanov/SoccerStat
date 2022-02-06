@@ -17,7 +17,7 @@ const Home = () => {
                         <div className={css.block_content__inner_box_1}>
                             <div>
                                 <p>Добро пожаловать на</p>
-                                <h1 className={css.block_content__title}>SOCCER-STAT</h1>
+                                <h1 className={css.block_content__title}>SOCCERSTAT</h1>
                                 <p>Здесь вы найдёте всё о лучшей игре в мире.</p>
                                 <p>У нас самая точная и свежая статистика.</p>
                             </div>

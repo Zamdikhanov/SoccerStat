@@ -1,7 +1,7 @@
 import React from "react";
-import css from './TeamMatch.module.css';
+import css from './MatchRow.module.css';
 
-const TeamMatch = (props) => {
+const MatchRow = (props) => {
     return (
         <div className={css.match}>
             <div className={css.matchPart_1}>
@@ -34,4 +34,4 @@ const TeamMatch = (props) => {
     )
 }
 
-export default TeamMatch;
+export default MatchRow;

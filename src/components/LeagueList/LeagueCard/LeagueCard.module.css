@@ -103,3 +103,27 @@
     background-color: rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 8px var(--color-main-accent);
 }
+
+@media (max-width: 1250px) {
+    .card__button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc( (100% - 3*2*10px)/3);
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: calc( (100% - 2*2*10px)/2);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc( (100% - 1*2*10px));
+    }
+}

@@ -1,0 +1,100 @@
+.match {
+    display: flex;
+    border: 1px solid var(--color-main-gray);
+    width: 100%;
+    padding: 0.3em 0.7em;
+}
+
+.match:nth-child(2n) {
+    background-color: var(--color-main-gray02);
+}
+
+.matchPart_1 {
+    display: flex;
+    width: 40%;
+}
+
+.block {
+    padding: 0 1em;
+}
+
+.winner {
+    font-weight: 700;
+}
+
+.matchday {
+    width: 60px;
+}
+
+.status {
+    width: 100px;
+}
+
+.utcDate {
+    width: calc(100% - 160px);
+    text-align: center;
+}
+
+.matchPart_2 {
+    display: flex;
+    width: 60%;
+}
+
+.homeTeam {
+    width: calc((100% - 70px)/2);
+    text-align: center;
+}
+
+.score {
+    width: 70px;
+    text-align: center;
+}
+
+.awayTeam {
+    width: calc((100% - 70px)/2);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .match {
+        display: block;
+    }
+    .block {
+        padding: 0 0.8em;
+    }
+    .matchPart_1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 1em 0;
+        border-bottom: 1px solid var(--color-main-gray);
+    }
+    .matchday {
+        width: initial;
+    }
+    .matchday::before {
+        content: 'Тур: ';
+    }
+    .status {
+        width: initial;
+    }
+    .status::before {
+        content: 'Статус: ';
+    }
+    .utcDate {
+        width: initial;
+    }
+    .utcDate::before {
+        content: 'Дата: ';
+    }
+    .matchPart_2 {
+        width: 100%;
+        padding: 1em 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .block {
+        padding: 0 0.5em;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
+import MatchRow from '../../common/MatchRow/MatchRow';
 import css from './LeagueCalendar.module.css';
-import LeagueMatch from './LeagueMatch/LeagueMatch';
 
 const LeagueCalendar = (props) => {
 
@@ -21,17 +21,19 @@ const LeagueCalendar = (props) => {
             name: 'Команда в гостях'
         },
     }
-    
+
     return (
         <main className={css.main}>
             <div className={css.wrap}>
                 <div className={css.league_container}>
-                        <h1 className={css.title}>Календарь {props.competition.name}</h1>
-                        <h2 className={css.title}>({props.competition.area.name})</h2>
+                    <h1 className={css.title}>Календарь {props.competition.name}</h1>
+                    <h2 className={css.title}>({props.competition.area.name})</h2>
                 </div>
-                <LeagueMatch {...titleTable} />
+                <div className={css.titleTable}>
+                    <MatchRow {...titleTable} />
+                </div>
                 {props.matches.map(match => (
-                    <LeagueMatch key={match.id} {...match} />
+                    <MatchRow key={match.id} {...match} />
                 ))}
 
             </div>

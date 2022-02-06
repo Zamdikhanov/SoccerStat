@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Navigate, useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
 import { requestLeagueMatches } from '../../redux/leagueMatchesReducer';
 import LeagueCalendar from './LeagueCalendar';

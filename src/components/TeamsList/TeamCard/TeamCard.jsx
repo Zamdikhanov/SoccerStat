@@ -12,9 +12,11 @@ const TeamCard = (props) => {
                 <span>Основан в {props.founded}</span>
                 <div>
                     <div className={css.card__imageContainer}>
-                        <img className={css.image}
-                            src={props.crestUrl}
-                            alt='flag' />
+                        {props.crestUrl &&
+                            <img className={css.image}
+                                src={props.crestUrl}
+                                alt='flag' />
+                        }
                     </div>
                     <div className={css.link}>
                         <a href={props.website}

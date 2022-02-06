@@ -1,6 +1,6 @@
 import React from 'react';
+import MatchRow from '../../common/MatchRow/MatchRow';
 import css from './TeamCalendar.module.css';
-import TeamMatch from './TeamMatch/TeamMatch';
 
 const TeamCalendar = (props) => {
     const titleTable = {
@@ -40,9 +40,11 @@ const TeamCalendar = (props) => {
                         {searchTeamName()}
                     </h2>
                 </div>
-                <TeamMatch {...titleTable} />
+                <div className={css.titleTable}>
+                    <MatchRow {...titleTable} />
+                </div>
                 {props.teamCalendar.matches.map(match => (
-                    <TeamMatch key={match.id} {...match} />
+                    <MatchRow key={match.id} {...match} />
                 ))}
             </div>
         </main>

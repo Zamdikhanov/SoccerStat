@@ -11,3 +11,9 @@
     margin: 5px auto;
     padding: 0 -10px;
 }
+
+@media (max-width: 1420px) {
+    .wrap {
+        width: var(--width-wrap);
+    }
+}

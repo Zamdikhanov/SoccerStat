@@ -1,23 +1,23 @@
 import React from 'react';
-import { NavLink, useLocation, useSearchParams } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import css from './Breadcrumbs.module.css';
 
 const Breadcrumbs = () => {
 
-    // const [searchParams, setSearchParams] = useSearchParams();
-    // searchParams.get('leagueId');
+    const [isShow, setIsShow] = useState(false);
 
     const tabNames = {
         'league-list': {
             name: 'Список лиг'
         },
-        'league-calendar':{
+        'league-calendar': {
             name: 'Календарь лиги'
         },
-        'team-list':{
+        'team-list': {
             name: 'Команды лиги'
         },
-        'team-calendar':{
+        'team-calendar': {
             name: 'Календарь команды'
         }
     }
@@ -36,7 +36,7 @@ const Breadcrumbs = () => {
                 </li>)
         } else {
             return (
-                <li className={css.list_item}  key={pathElement}>
+                <li className={css.list_item} key={pathElement}>
                     <NavLink className={css.navlink} to={routeTo}>
                         {tabNames[pathElement].name || pathElement}
                     </NavLink>
@@ -45,11 +45,23 @@ const Breadcrumbs = () => {
         }
     });
 
+    const handleClick = () => {
+        setIsShow(!isShow);
+        let back = document.querySelector('body');
+        back.classList.toggle('lock');
+    }
 
     return (
         <nav className={css.nav}>
             <div className={css.wrap}>
-                <ul className={css.list}>
+                <button class={!isShow
+                    ? (`${css.nav_burger} ${css.nav_btn}`)
+                    : (`${css.nav_burger} ${css.nav_btn} ${css.menu_button__active}`)}
+                    onClick={handleClick}>
+                    МЕНЮ
+                    <span></span>
+                </button>
+                <ul className={isShow ? css.list : (`${css.list} ${css.list_hide}`)}>
                     <li className={css.list_item}>
                         {pathNames.length > 0 ? (
                             <NavLink className={css.navlink} to="/">Главная</NavLink>
