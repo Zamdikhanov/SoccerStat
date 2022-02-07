@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import css from './InputSearch.module.css';
 
-const InputSearch = ({ inputValue, searchParams, setSearchParams, searchName }) => {
+const InputSearch = ({ searchParams, setSearchParams, searchName, arrayParamsName = [] }) => {
 
-    const [searchText, setSearchText] = useState(inputValue);
+    const [searchText, setSearchText] = useState(searchParams.get(searchName));
+
+    let params = {};
+    arrayParamsName.forEach(paramsName => {
+        params[paramsName] = searchParams.get(paramsName);
+    });
+
     const handleChange = (e) => {
         setSearchText(e.target.value);
         console.log(searchParams);
-        let params = {[searchName]: e.target.value};
+        params[searchName] = e.target.value;
         setSearchParams(params);
-    }
+    };
 
     return (
         <div className={css.container}>
@@ -18,7 +23,6 @@ const InputSearch = ({ inputValue, searchParams, setSearchParams, searchName }) 
                 <span className={css.search_label}>Поиск</span>
                 <input className={css.search_input}
                     type='text'
-                    autoFocus
                     value={searchText}
                     onChange={handleChange} />
             </label>

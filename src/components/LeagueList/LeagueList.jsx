@@ -21,7 +21,7 @@ const LeagueList = (props) => {
     return (
         <main className={css.main}>
             <div className={css.wrap}>
-                <InputSearch inputValue={inputValue} searchParams={searchParams} setSearchParams={setSearchParams} searchName='leagueName' />
+                <InputSearch searchParams={searchParams} setSearchParams={setSearchParams} searchName='leagueName' />
                 {
                     competitionsFiltered.map(league => (
                         <LeagueCard key={league.id}  {...league} />

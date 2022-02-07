@@ -10,9 +10,9 @@ let initialState = {
         id: 2021,
         area: {
             id: 2072,
-            name: "England"
+            name: "подождите 30-60 секунд"
         },
-        name: "Premier League",
+        name: "Перезагрузите страницу позже",
         code: "PL",
         plan: "TIER_ONE",
         lastUpdated: "2021-04-17T02:20:14Z"
@@ -28,17 +28,17 @@ let initialState = {
         id: 57,
         area: {
             id: 2072,
-            name: "England"
+            name: "не загружено"
         },
-        name: "Arsenal FC",
+        name: "не загружено",
         shortName: "Arsenal",
         tla: "ARS",
-        crestUrl: "https://crests.football-data.org/57.svg",
+        crestUrl: "",
         address: "75 Drayton Park London N5 1BU",
         phone: "+44 (020) 76195003",
-        website: "http://www.arsenal.com",
-        email: "info@arsenal.co.uk",
-        founded: 1886,
+        website: "не загружено",
+        email: "не загружено",
+        founded: 'не загружено',
         clubColors: "Red / White",
         venue: "Emirates Stadium",
         lastUpdated: "2020-11-26T02:15:20Z"

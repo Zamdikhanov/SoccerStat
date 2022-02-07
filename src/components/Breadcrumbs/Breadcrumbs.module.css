@@ -153,7 +153,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.90);
-        padding: 130px 20px 30px;
+        padding: 150px 20px 30px;
         transition: left 0.4s ease 0s;
         overflow: auto;
         display: block;
@@ -171,10 +171,31 @@
     .list_item:first-child {
         padding-left: 0;
     }
+    .list_item:last-child:hover {
+        border: 1px solid #fff;
+    }
     .navlink,
     .last {
         padding: 0.5em;
         height: initial;
         transform: skewX(00deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .list {
+        padding: 130px 20px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        padding: 120px 20px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list {
+        padding: 110px 20px 30px;
     }
 }

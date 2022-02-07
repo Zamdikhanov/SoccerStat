@@ -12,18 +12,18 @@ let initialState = {
         id: 0,
         area: {
             id: 0,
-            name: "noName",
-            countryCode: "noName",
-            ensignUrl: "https://crests.football-data.org/764.svg"
+            name: "не загружено",
+            countryCode: "не загружено",
+            ensignUrl: ""
         },
-        name: "noName",
-        code: "noName",
-        emblemUrl: "https://crests.football-data.org/764.svg",
+        name: "не загружено",
+        code: "не загружено",
+        emblemUrl: "",
         plan: "TIER_ONE",
         currentSeason: {
             id: 0,
-            startDate: "2021-05-30",
-            endDate: "2021-12-05",
+            startDate: "не загружено",
+            endDate: "не загружено",
             currentMatchday: 0,
             winner: null
         },

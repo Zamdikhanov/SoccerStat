@@ -27,12 +27,12 @@ let initialState = {
             currentMatchday: 21,
             winner: null
         },
-        utcDate: "2021-08-14T16:30:00Z",
-        status: "FINISHED",
+        utcDate: "не загружено",
+        status: "не загружено",
         matchday: 1,
         stage: "REGULAR_SEASON",
         group: null,
-        lastUpdated: "2022-01-26T08:20:21Z",
+        lastUpdated: "не загружено",
         odds: {
             msg: "Activate Odds-Package in User-Panel to retrieve odds."
         },
@@ -40,8 +40,8 @@ let initialState = {
             winner: "HOME_TEAM",
             duration: "REGULAR",
             fullTime: {
-                homeTeam: 5,
-                awayTeam: 2
+                homeTeam: '',
+                awayTeam: ''
             },
             halfTime: {
                 homeTeam: 3,
@@ -58,11 +58,11 @@ let initialState = {
         },
         homeTeam: {
             id: 4,
-            name: "Borussia Dortmund"
+            name: "не загружено"
         },
         awayTeam: {
             id: 19,
-            name: "Eintracht Frankfurt"
+            name: "не загружено"
         },
         referees: [{
                 id: 15747,
@@ -102,7 +102,7 @@ let initialState = {
             }
         ]
     }, ],
-    isLoading: false,
+    isLoading: false
 }
 
 const teamCalendarReducer = (state = initialState, action) => {
@@ -110,7 +110,8 @@ const teamCalendarReducer = (state = initialState, action) => {
         case SET_TEAM_MATCHES:
             return ({
                 ...state,
-                ...action.matches
+                ...action.matches,
+                errorLoading: false
             });
         case TOGGLE_IS_LOADING:
             return ({

@@ -24,7 +24,7 @@ function App() {
           <Route path="/league-list/team-list" element={<TeamsListContainer />}/>
           <Route path="/league-list/team-list/team-calendar" element={<TeamCalendarContainer />} />
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>

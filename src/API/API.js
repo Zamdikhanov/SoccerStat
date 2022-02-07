@@ -12,24 +12,24 @@ export const API = {
         try {
             let response = await instance.get(`competitions/?plan=${accessPlan}`);
             return response.data;
-        } catch (e) { console.log(e) }
+        } catch (e) { return ({ error: true }) }
     },
     async getLeagueMatches(id) {
         try {
             let responceMatches = await instance.get(`competitions/${id}/matches`);
             return responceMatches.data;
-        } catch (e) { console.log(e) }
+        } catch (e) { return ({ error: true }) }
     },
     async getLeagueTeams(id) {
         try {
             let responceTeams = await instance.get(`competitions/${id}/teams`);
             return responceTeams.data;
-        } catch (e) { console.log(e) }
+        } catch (e) { return ({ error: true }) }
     },
     async getTeamMatches(id) {
         try {
             let responceTeamMatches = await instance.get(`teams/${id}/matches/`);
             return responceTeamMatches.data;
-        } catch (e) { console.log(e) }
+        } catch (e) { return ({ error: true }) }
     }
 }

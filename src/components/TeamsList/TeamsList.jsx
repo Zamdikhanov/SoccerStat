@@ -21,7 +21,7 @@ const TeamList = (props) => {
     return (
         <main className={css.main}>
             <div className={css.wrap}>
-                <InputSearch inputValue={inputValue} searchParams={searchParams} setSearchParams={setSearchParams} searchName='teamName' />
+                <InputSearch searchParams={searchParams} setSearchParams={setSearchParams} searchName='teamName' arrayParamsName={['leagueId']} />
                 <div className={css.titleContainer}>
                     <h1 className={css.title}>
                         Команды {props.leagueTeams.competition.name}

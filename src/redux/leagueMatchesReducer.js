@@ -10,12 +10,12 @@ let initialState = {
         id: 2001,
         area: {
             id: 2077,
-            name: "Europe"
+            name: "повторите через 30-60 секунд"
         },
-        name: "UEFA Champions League",
+        name: "не загружено",
         code: "CL",
         plan: "TIER_ONE",
-        lastUpdated: "2021-06-26T13:37:26Z"
+        lastUpdated: "не загружено"
     },
     matches: [{
         id: 328846,
@@ -25,12 +25,12 @@ let initialState = {
             endDate: "2022-05-22",
             currentMatchday: 7
         },
-        utcDate: "2021-06-22T18:00:00Z",
-        status: "FINISHED",
+        utcDate: "не загружено",
+        status: "не загружено",
         matchday: null,
         stage: "PRELIMINARY_ROUND",
         group: null,
-        lastUpdated: "2022-01-22T08:20:10Z",
+        lastUpdated: "не загружено",
         odds: {
             msg: "Activate Odds-Package in User-Panel to retrieve odds."
         },
@@ -38,8 +38,8 @@ let initialState = {
             winner: "AWAY_TEAM",
             duration: "REGULAR",
             fullTime: {
-                homeTeam: 0,
-                awayTeam: 1
+                homeTeam: '',
+                awayTeam: ''
             },
             halfTime: {
                 homeTeam: 0,
@@ -56,11 +56,11 @@ let initialState = {
         },
         homeTeam: {
             id: 8166,
-            name: "HB Tórshavn"
+            name: "не загружено"
         },
         awayTeam: {
             id: 8912,
-            name: "Inter Club d'Escaldes"
+            name: "не загружено"
         },
         referees: []
     }, ],

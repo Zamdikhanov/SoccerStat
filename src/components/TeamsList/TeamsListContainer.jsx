@@ -4,6 +4,7 @@ import TeamsList from './TeamsList';
 import { requestLeagueTeams } from './../../redux/leagueTeamsReducer';
 import { useSearchParams } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
+import PageIsNotAvailable from '../PageIsNotAvailable/PageIsNotAvailable';
 
 const TeamListContainer = (props) => {
 
@@ -12,10 +13,10 @@ const TeamListContainer = (props) => {
 
     useEffect(() => {
         props.requestLeagueTeams(leagueId);
-    }, [leagueId])
+    }, [leagueId, props.leagueTeams.error])
 
     return (
-        <>
+        <>{console.log(props)}{console.log('error',props.leagueTeams.error)}
             {props.leagueTeams.isLoading
                 ? <Preloader />
                 : <TeamsList {...props} />

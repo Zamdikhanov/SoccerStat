@@ -24,20 +24,28 @@ const Breadcrumbs = () => {
     let location = useLocation();
     const pathNames = location.pathname.split("/").filter((x) => (x !== ""));
 
+    const handleClick = () => {
+        setIsShow(!isShow);
+        let back = document.querySelector('body');
+        back.classList.toggle('lock');
+    }
+
     const crumbs = pathNames.map((pathElement, index) => {
         const routeTo = `/${pathNames.slice(0, index + 1).join('/')}`;
         const isLast = index === pathNames.length - 1;
         if (isLast) {
             return (
                 <li className={css.list_item} key={pathElement} >
-                    <div className={css.last}>
+                    <div className={css.last}
+                        onClick={handleClick}>
                         {tabNames[pathElement].name || pathElement}
                     </div>
                 </li>)
         } else {
             return (
                 <li className={css.list_item} key={pathElement}>
-                    <NavLink className={css.navlink} to={routeTo}>
+                    <NavLink className={css.navlink} to={routeTo}
+                        onClick={handleClick}>
                         {tabNames[pathElement].name || pathElement}
                     </NavLink>
                 </li>
@@ -45,16 +53,10 @@ const Breadcrumbs = () => {
         }
     });
 
-    const handleClick = () => {
-        setIsShow(!isShow);
-        let back = document.querySelector('body');
-        back.classList.toggle('lock');
-    }
-
     return (
         <nav className={css.nav}>
             <div className={css.wrap}>
-                <button class={!isShow
+                <button className={!isShow
                     ? (`${css.nav_burger} ${css.nav_btn}`)
                     : (`${css.nav_burger} ${css.nav_btn} ${css.menu_button__active}`)}
                     onClick={handleClick}>
@@ -64,9 +66,9 @@ const Breadcrumbs = () => {
                 <ul className={isShow ? css.list : (`${css.list} ${css.list_hide}`)}>
                     <li className={css.list_item}>
                         {pathNames.length > 0 ? (
-                            <NavLink className={css.navlink} to="/">Главная</NavLink>
+                            <NavLink className={css.navlink} to="/" onClick={handleClick}>Главная</NavLink>
                         ) : (
-                            <div className={css.last}>Главная</div>
+                            <div className={css.last} onClick={handleClick}>Главная</div>
                         )}
                     </li>
                     {crumbs}

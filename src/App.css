@@ -37,11 +37,17 @@ select {
 }
 
 body.lock {
-    overflow: hidden;
+    overflow: auto;
 }
 
 @media (max-width: 1420px) {
      :root {
         --width-wrap: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    body.lock {
+        overflow: hidden;
     }
 }
