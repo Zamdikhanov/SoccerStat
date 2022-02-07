@@ -7,7 +7,7 @@ import LeagueCalendar from './LeagueCalendar';
 
 const LeagueCalendarContainer = (props) => {
     
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const leagueId = searchParams.get('leagueId') || '';
 
     useEffect(() => {

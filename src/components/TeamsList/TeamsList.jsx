@@ -8,8 +8,8 @@ const TeamList = (props) => {
 
     const [searchParams, setSearchParams] = useSearchParams();
     const inputValue = searchParams.get('teamName') || '';
-    const [teamsFiltered, setTeamsFiltered] = useState([]); console.log(props);
-    
+    const [teamsFiltered, setTeamsFiltered] = useState([]);
+
     useEffect(() => {
         const { teams = [] } = props.leagueTeams;
         setTeamsFiltered(teams.filter((el) => {
@@ -21,7 +21,10 @@ const TeamList = (props) => {
     return (
         <main className={css.main}>
             <div className={css.wrap}>
-                <InputSearch searchParams={searchParams} setSearchParams={setSearchParams} searchName='teamName' arrayParamsName={['leagueId']} />
+                <InputSearch searchParams={searchParams}
+                    setSearchParams={setSearchParams}
+                    searchName='teamName'
+                    arrayParamsName={['leagueId']} />
                 <div className={css.titleContainer}>
                     <h1 className={css.title}>
                         Команды {props.leagueTeams.competition.name}

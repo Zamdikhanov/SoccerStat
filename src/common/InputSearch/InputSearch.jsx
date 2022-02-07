@@ -3,7 +3,7 @@ import css from './InputSearch.module.css';
 
 const InputSearch = ({ searchParams, setSearchParams, searchName, arrayParamsName = [] }) => {
 
-    const [searchText, setSearchText] = useState(searchParams.get(searchName));
+    const [searchText, setSearchText] = useState(searchParams.get(searchName) || '');
 
     let params = {};
     arrayParamsName.forEach(paramsName => {
