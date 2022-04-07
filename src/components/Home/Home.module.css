@@ -1,239 +1,236 @@
 .main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .wrap {
-    height: 100%;
-    width: var(--width-wrap);
-    padding: 5px 0px;
-    margin: 0 auto;
+  height: 100%;
+  width: var(--width-wrap);
+  padding: 5px 0px;
+  margin: 0 auto;
 }
 
 .block {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .block_container_1 {
-    width: 60%;
-    overflow: hidden;
+  width: 60%;
+  overflow: hidden;
 }
 
 .block_img_1 {
-    display: block;
-    position: relative;
-    background-color: #F6F6F6;
-    background: url(https://www.pngkey.com/png/detail/223-2234631_jugadores-de-futbol-2017-png.png);
-    background-position: 50% 0%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-weight: 700;
-    font-size: 32px;
-    transition: all ease-in-out 3s;
+  display: block;
+  position: relative;
+  background: url(../../assets/images/jugadores-de-futbol-2017.png);
+  background-color: #f6f6f6;
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  transition: all ease-in-out 3s;
 }
 
 .block_img_1::before {
-    content: '';
-    display: block;
-    padding-bottom: 80%;
+  content: "";
+  display: block;
+  padding-bottom: 80%;
 }
 
 .block_content__box_1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    background-color: #F6F6F6;
-    font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: #f6f6f6;
+  font-size: 1.5rem;
 }
 
 .block_content__inner_box_1 {
-    text-align: center;
+  text-align: center;
 }
 
 .block_content__title {
-    font-size: 3rem;
-    line-height: 3rem;
-    margin: 0;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 0;
 }
 
 .block_content__link_1 {
-    display: block;
-    width: fit-content;
-    margin: 2rem auto 0;
-    border-radius: 3px;
-    border: 1px solid var(--color-main-gray);
-    text-decoration: none;
-    transition: all ease-in-out 0.3s;
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  border-radius: 3px;
+  border: 1px solid var(--color-main-gray);
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
 }
 
 .block_content__link_1:hover {
-    box-shadow: 0px 0px 25px var(--color-main-gray08);
+  box-shadow: 0px 0px 25px var(--color-main-gray08);
 }
 
 .block_content__link_button_1 {
-    padding: 1em;
-    font-size: 2rem;
-    color: #000;
-    text-transform: uppercase;
+  padding: 1em;
+  font-size: 2rem;
+  color: #000;
+  text-transform: uppercase;
 }
-
 
 /* for first block */
 
 @media (max-width: 900px) {
-    .block {
-        display: block;
-    }
-    .block_container_1 {
-        width: 100%;
-    }
-    .block_img_1 {
-        font-size: 24px;
-    }
-    .block_content__box_1 {
-        padding: 2em 0;
-        width: 100%;
-        font-size: 1.3rem;
-    }
+  .block {
+    display: block;
+  }
+  .block_container_1 {
+    width: 100%;
+  }
+  .block_img_1 {
+    font-size: 24px;
+  }
+  .block_content__box_1 {
+    padding: 2em 0;
+    width: 100%;
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .block_content__inner_box_1 {
-        padding: 0 10px;
-    }
-    .block_img_1 {
-        font-size: 20px;
-    }
-    .block_content__box_1 {
-        padding: 2em 0;
-        width: 100%;
-        font-size: 1.1rem;
-    }
-    .block_content__link_1 {
-        margin: 1.5rem auto 0;
-    }
-    .block_content__link_button_1 {
-        font-size: 1.5rem;
-    }
+  .block_content__inner_box_1 {
+    padding: 0 10px;
+  }
+  .block_img_1 {
+    font-size: 20px;
+  }
+  .block_content__box_1 {
+    padding: 2em 0;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .block_content__link_1 {
+    margin: 1.5rem auto 0;
+  }
+  .block_content__link_button_1 {
+    font-size: 1.5rem;
+  }
 }
 
 .block_content_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    border-radius: 3px;
-    box-shadow: 0px 0px 20px var(--color-main-gray08);
-    margin: 50px 0;
-    padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border-radius: 3px;
+  box-shadow: 0px 0px 20px var(--color-main-gray08);
+  margin: 50px 0;
+  padding: 2em;
 }
-
 
 /* for second block */
 
 @media (max-width: 900px) {
-    .block_content_2 {
-        width: calc(100% - 40px);
-        margin: 20px auto;
-    }
+  .block_content_2 {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+  }
 }
 
 .block_content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #f6f6f6;
 }
 
 .block_content__link {
-    border-radius: 3px;
-    border: 1px solid #1e1e1e;
-    text-decoration: none;
-    background: linear-gradient(30deg, rgb(10, 18, 22), rgb(34, 44, 67));
-    color: #fff;
-    transition: all ease-in-out 0.3s;
+  border-radius: 3px;
+  border: 1px solid #1e1e1e;
+  text-decoration: none;
+  background: linear-gradient(30deg, rgb(10, 18, 22), rgb(34, 44, 67));
+  color: #fff;
+  transition: all ease-in-out 0.3s;
 }
 
 .block_content__link:hover {
-    box-shadow: 0px 0px 25px var(--color-main-gray08);
+  box-shadow: 0px 0px 25px var(--color-main-gray08);
 }
 
 .block_content__link_button {
-    padding: 1em;
-    font-size: 2rem;
-    text-transform: uppercase;
-    transition: all ease-in-out 0.3s;
+  padding: 1em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
 }
 
 .block_content__link:hover .block_content__link_button {
-    color: var(--color-main-accent);
+  color: var(--color-main-accent);
 }
 
 .block_container {
-    width: 50%;
-    overflow: hidden;
+  width: 50%;
+  overflow: hidden;
 }
 
 .block_img {
-    display: block;
-    position: relative;
-    background: url(https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    background-position: 50% 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-weight: 700;
-    font-size: 32px;
-    transition: all ease-in-out 3s;
+  display: block;
+  position: relative;
+  background: url(../../assets/images/stadium-bg.jpg);
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  transition: all ease-in-out 3s;
 }
 
 .block_img::before {
-    content: '';
-    display: block;
-    padding-bottom: 50%;
+  content: "";
+  display: block;
+  padding-bottom: 50%;
 }
 
 .block_img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .block_img__content {
-    display: block;
-    width: fit-content;
-    padding: 0.2em;
-    position: absolute;
-    top: 25px;
-    right: 50%;
-    transform: translateX(50%);
+  display: block;
+  width: fit-content;
+  padding: 0.2em;
+  position: absolute;
+  top: 25px;
+  right: 50%;
+  transform: translateX(50%);
 }
-
 
 /* for third block */
 
 @media (max-width: 900px) {
-    .block_content {
-        width: 100%;
-        padding: 4em 0;
-    }
-    .block_content__link_button {
-        font-size: 1.4rem;
-    }
-    .block_container {
-        width: 100%;
-    }
+  .block_content {
+    width: 100%;
+    padding: 4em 0;
+  }
+  .block_content__link_button {
+    font-size: 1.4rem;
+  }
+  .block_container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
-    .block_img {
-        font-size: 24px;
-    }
+  .block_img {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 480px) {
-    .block_img {
-        font-size: 20px;
-    }
+  .block_img {
+    font-size: 20px;
+  }
 }
