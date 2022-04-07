@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/soccerstat/static/css/main.0db8996f.chunk.css",
-    "main.js": "/soccerstat/static/js/main.76ef4019.chunk.js",
-    "main.js.map": "/soccerstat/static/js/main.76ef4019.chunk.js.map",
+    "main.css": "/soccerstat/static/css/main.1474ceac.chunk.css",
+    "main.js": "/soccerstat/static/js/main.552e62a3.chunk.js",
+    "main.js.map": "/soccerstat/static/js/main.552e62a3.chunk.js.map",
     "runtime~main.js": "/soccerstat/static/js/runtime~main.ef7a27cd.js",
     "runtime~main.js.map": "/soccerstat/static/js/runtime~main.ef7a27cd.js.map",
-    "static/js/2.e8b47433.chunk.js": "/soccerstat/static/js/2.e8b47433.chunk.js",
-    "static/js/2.e8b47433.chunk.js.map": "/soccerstat/static/js/2.e8b47433.chunk.js.map",
+    "static/js/2.dbd5621c.chunk.js": "/soccerstat/static/js/2.dbd5621c.chunk.js",
+    "static/js/2.dbd5621c.chunk.js.map": "/soccerstat/static/js/2.dbd5621c.chunk.js.map",
     "static/js/3.ebe0f5f3.chunk.js": "/soccerstat/static/js/3.ebe0f5f3.chunk.js",
     "static/js/3.ebe0f5f3.chunk.js.map": "/soccerstat/static/js/3.ebe0f5f3.chunk.js.map",
     "index.html": "/soccerstat/index.html",
-    "precache-manifest.eaed21aa4f99f09efc4d49e7e39aa095.js": "/soccerstat/precache-manifest.eaed21aa4f99f09efc4d49e7e39aa095.js",
+    "precache-manifest.d1a1006bf2a2f2698f194a76762b8103.js": "/soccerstat/precache-manifest.d1a1006bf2a2f2698f194a76762b8103.js",
     "service-worker.js": "/soccerstat/service-worker.js",
-    "static/css/main.0db8996f.chunk.css.map": "/soccerstat/static/css/main.0db8996f.chunk.css.map",
+    "static/css/main.1474ceac.chunk.css.map": "/soccerstat/static/css/main.1474ceac.chunk.css.map",
     "static/media/ball-logo.png": "/soccerstat/static/media/ball-logo.b23f9248.png",
+    "static/media/Home.module.css": "/soccerstat/static/media/stadium-bg.a8ea19aa.jpg",
     "static/media/preloader-ball.gif": "/soccerstat/static/media/preloader-ball.1ed2d4c4.gif"
   }
 }
