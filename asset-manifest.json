@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/soccerstat/static/css/main.1474ceac.chunk.css",
-    "main.js": "/soccerstat/static/js/main.552e62a3.chunk.js",
-    "main.js.map": "/soccerstat/static/js/main.552e62a3.chunk.js.map",
+    "main.js": "/soccerstat/static/js/main.80e29267.chunk.js",
+    "main.js.map": "/soccerstat/static/js/main.80e29267.chunk.js.map",
     "runtime~main.js": "/soccerstat/static/js/runtime~main.ef7a27cd.js",
     "runtime~main.js.map": "/soccerstat/static/js/runtime~main.ef7a27cd.js.map",
     "static/js/2.dbd5621c.chunk.js": "/soccerstat/static/js/2.dbd5621c.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ebe0f5f3.chunk.js": "/soccerstat/static/js/3.ebe0f5f3.chunk.js",
     "static/js/3.ebe0f5f3.chunk.js.map": "/soccerstat/static/js/3.ebe0f5f3.chunk.js.map",
     "index.html": "/soccerstat/index.html",
-    "precache-manifest.d1a1006bf2a2f2698f194a76762b8103.js": "/soccerstat/precache-manifest.d1a1006bf2a2f2698f194a76762b8103.js",
+    "precache-manifest.6ae49082122030d7889af5cc745d702a.js": "/soccerstat/precache-manifest.6ae49082122030d7889af5cc745d702a.js",
     "service-worker.js": "/soccerstat/service-worker.js",
     "static/css/main.1474ceac.chunk.css.map": "/soccerstat/static/css/main.1474ceac.chunk.css.map",
     "static/media/ball-logo.png": "/soccerstat/static/media/ball-logo.b23f9248.png",
